@@ -1,0 +1,577 @@
+/*---BASE---*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: sans-serif;
+  line-height: 1; }
+
+img {
+  max-width: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+/*---LAYOUTS---*/
+.wrapper {
+  padding: 0 25px;
+  width: calc(100% - 100px);
+  max-width: 1440px;
+  margin: 0 auto; }
+  @media (max-width: 550px) {
+    .wrapper {
+      width: calc(100% - 50px); } }
+
+/*---HEADER---*/
+.header {
+  display: flex;
+  flex-direction: column;
+  background: url(../img/background.png) no-repeat center center; }
+  .header .header-content {
+    display: flex;
+    flex-direction: column; }
+  .header .board {
+    align-self: center;
+    width: 100%; }
+  .header .nav {
+    margin: 60px 25% 80px 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 1400px) {
+      .header .nav {
+        margin: 30px 25% 30px 25%; } }
+    @media (max-width: 1040px) {
+      .header .nav {
+        margin: 20px 25% 20px 25%; } }
+    @media (max-width: 620px) {
+      .header .nav {
+        margin: 10px 15% 10px 15%; } }
+    @media (max-width: 420px) {
+      .header .nav {
+        margin: 10px 0 10px 0; } }
+    .header .nav a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Maven Pro";
+      font-size: 26px;
+      color: white; }
+      @media (max-width: 1400px) {
+        .header .nav a {
+          font-size: 20px; } }
+      @media (max-width: 1040px) {
+        .header .nav a {
+          font-size: 16px; } }
+      @media (max-width: 800px) {
+        .header .nav a {
+          font-size: 12px; } }
+      @media (max-width: 620px) {
+        .header .nav a {
+          font-size: 8px; } }
+  .header .slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .header .slogan p {
+      font-family: "Maven Pro";
+      font-size: 56px;
+      color: white;
+      margin-bottom: 60px;
+      text-align: center; }
+      @media (max-width: 1400px) {
+        .header .slogan p {
+          font-size: 46px;
+          margin-bottom: 40px; } }
+      @media (max-width: 1040px) {
+        .header .slogan p {
+          font-size: 40px;
+          margin-bottom: 30px; } }
+      @media (max-width: 800px) {
+        .header .slogan p {
+          font-size: 32px;
+          margin-bottom: 30px; } }
+      @media (max-width: 620px) {
+        .header .slogan p {
+          font-size: 22px;
+          margin-bottom: 20px; } }
+      @media (max-width: 420px) {
+        .header .slogan p {
+          font-size: 16px; } }
+    .header .slogan .header-button {
+      vertical-align: middle;
+      width: 240px;
+      height: 50px;
+      padding: 15px 30px;
+      border-radius: 30px;
+      margin-bottom: 70px;
+      border: none;
+      font-family: "Maven Pro";
+      font-size: 14px;
+      color: #ff6e0b;
+      font-weight: 500;
+      background-color: white;
+      text-transform: uppercase;
+      cursor: pointer; }
+      @media (max-width: 1400px) {
+        .header .slogan .header-button {
+          margin-bottom: 40px; } }
+      @media (max-width: 800px) {
+        .header .slogan .header-button {
+          width: 200px;
+          height: 40px;
+          padding: 0;
+          font-size: 12px; } }
+      @media (max-width: 620px) {
+        .header .slogan .header-button {
+          width: 180px;
+          height: 30px;
+          margin-bottom: 20px; } }
+      @media (max-width: 480px) {
+        .header .slogan .header-button {
+          width: 140px;
+          height: 20px;
+          font-size: 8px; } }
+      .header .slogan .header-button i {
+        padding-left: 20px; }
+        @media (max-width: 1400px) {
+          .header .slogan .header-button i {
+            padding-left: 10px; } }
+
+.logo-header {
+  display: flex;
+  justify-content: center; }
+
+/*---MODULES---*/
+.pricing {
+  background-color: white; }
+  .pricing .pricing-content {
+    margin: 150px 0 180px; }
+    @media (max-width: 1400px) {
+      .pricing .pricing-content {
+        margin: 90px 0; } }
+    @media (max-width: 1040px) {
+      .pricing .pricing-content {
+        margin: 40px 0; } }
+    @media (max-width: 660px) {
+      .pricing .pricing-content {
+        margin: 20px 0; } }
+    .pricing .pricing-content .pricing-top {
+      margin: 0px 180px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      @media (max-width: 1400px) {
+        .pricing .pricing-content .pricing-top {
+          margin: 0px 70px; } }
+      @media (max-width: 1050px) {
+        .pricing .pricing-content .pricing-top {
+          margin: 0px 30px; } }
+      @media (max-width: 480px) {
+        .pricing .pricing-content .pricing-top {
+          margin: 0px; } }
+      .pricing .pricing-content .pricing-top .card {
+        width: calc(50% - 90px);
+        display: flex; }
+        .pricing .pricing-content .pricing-top .card:nth-child(odd) {
+          margin-right: 90px; }
+          @media (max-width: 1040px) {
+            .pricing .pricing-content .pricing-top .card:nth-child(odd) {
+              margin-right: 40px; } }
+        .pricing .pricing-content .pricing-top .card:nth-child(1) {
+          margin-bottom: 70px; }
+          @media (max-width: 1400px) {
+            .pricing .pricing-content .pricing-top .card:nth-child(1) {
+              margin-bottom: 30px; } }
+        .pricing .pricing-content .pricing-top .card:nth-child(2) {
+          margin-bottom: 70px; }
+          @media (max-width: 1400px) {
+            .pricing .pricing-content .pricing-top .card:nth-child(2) {
+              margin-bottom: 30px; } }
+        @media (max-width: 1040px) {
+          .pricing .pricing-content .pricing-top .card {
+            width: calc(50% - 40px); } }
+        .pricing .pricing-content .pricing-top .card .icon {
+          font-size: 46px;
+          margin-right: 20px;
+          color: #d0cdd7;
+          margin-top: 3px;
+          align-self: start; }
+          @media (max-width: 1400px) {
+            .pricing .pricing-content .pricing-top .card .icon {
+              font-size: 36px; } }
+          @media (max-width: 1040px) {
+            .pricing .pricing-content .pricing-top .card .icon {
+              font-size: 26px; } }
+          @media (max-width: 782px) {
+            .pricing .pricing-content .pricing-top .card .icon {
+              font-size: 18px;
+              margin-right: 10px; } }
+          @media (max-width: 420px) {
+            .pricing .pricing-content .pricing-top .card .icon {
+              font-size: 14px; } }
+          .pricing .pricing-content .pricing-top .card .icon:first-child {
+            margin-top: 8px; }
+            @media (max-width: 1400px) {
+              .pricing .pricing-content .pricing-top .card .icon:first-child {
+                margin-top: 3px; } }
+        .pricing .pricing-content .pricing-top .card .content {
+          display: flex;
+          flex-direction: column; }
+          .pricing .pricing-content .pricing-top .card .content .title {
+            margin-bottom: 15px;
+            font-family: "Maven Pro";
+            font-size: 38px;
+            color: #c2beca; }
+            @media (max-width: 1400px) {
+              .pricing .pricing-content .pricing-top .card .content .title {
+                font-size: 30px; } }
+            @media (max-width: 1040px) {
+              .pricing .pricing-content .pricing-top .card .content .title {
+                font-size: 24px; } }
+            @media (max-width: 782px) {
+              .pricing .pricing-content .pricing-top .card .content .title {
+                font-size: 15px;
+                margin-bottom: 10px; } }
+            @media (max-width: 480px) {
+              .pricing .pricing-content .pricing-top .card .content .title {
+                font-size: 12px;
+                margin-bottom: 5px; } }
+            @media (max-width: 420px) {
+              .pricing .pricing-content .pricing-top .card .content .title {
+                font-size: 10px; } }
+          .pricing .pricing-content .pricing-top .card .content .text {
+            color: #d0cdd7;
+            font-family: "Maven Pro";
+            font-size: 20px;
+            line-height: 1.3; }
+            @media (max-width: 1400px) {
+              .pricing .pricing-content .pricing-top .card .content .text {
+                font-size: 16px; } }
+            @media (max-width: 1040px) {
+              .pricing .pricing-content .pricing-top .card .content .text {
+                font-size: 12px; } }
+            @media (max-width: 782px) {
+              .pricing .pricing-content .pricing-top .card .content .text {
+                font-size: 8px; } }
+            @media (max-width: 480px) {
+              .pricing .pricing-content .pricing-top .card .content .text {
+                font-size: 6px; } }
+    .pricing .pricing-content .pricing-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 150px; }
+      @media (max-width: 1400px) {
+        .pricing .pricing-content .pricing-bottom {
+          margin-top: 70px; } }
+      @media (max-width: 1040px) {
+        .pricing .pricing-content .pricing-bottom {
+          margin-top: 50px; } }
+      @media (max-width: 800px) {
+        .pricing .pricing-content .pricing-bottom {
+          margin-top: 30px; } }
+      @media (max-width: 660px) {
+        .pricing .pricing-content .pricing-bottom {
+          margin-top: 20px; } }
+      .pricing .pricing-content .pricing-bottom .price {
+        margin-right: 40px;
+        width: calc(33% - 80px);
+        background: url(../img/background.png) no-repeat 10% center;
+        padding: 100px 70px 70px 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-family: "Maven Pro";
+        border-radius: 30px; }
+        @media (max-width: 1400px) {
+          .pricing .pricing-content .pricing-bottom .price {
+            padding: 50px 25px 50px 25px; } }
+        @media (max-width: 1040px) {
+          .pricing .pricing-content .pricing-bottom .price {
+            padding: 40px 25px 40px 25px;
+            margin-right: 20px;
+            width: 33%; } }
+        @media (max-width: 782px) {
+          .pricing .pricing-content .pricing-bottom .price {
+            padding: 30px 0px 30px 0px;
+            margin-right: 10px; } }
+        @media (max-width: 660px) {
+          .pricing .pricing-content .pricing-bottom .price {
+            margin-right: 10px; } }
+        @media (max-width: 480px) {
+          .pricing .pricing-content .pricing-bottom .price {
+            padding: 15px 0px 15px 0px;
+            margin-right: 5px; } }
+        .pricing .pricing-content .pricing-bottom .price:last-child {
+          margin-right: 0px; }
+        .pricing .pricing-content .pricing-bottom .price .sub-title {
+          margin-bottom: 25px;
+          font-weight: 500;
+          font-size: 16px; }
+          @media (max-width: 1400px) {
+            .pricing .pricing-content .pricing-bottom .price .sub-title {
+              font-size: 12px;
+              margin-bottom: 15px; } }
+          @media (max-width: 660px) {
+            .pricing .pricing-content .pricing-bottom .price .sub-title {
+              margin-bottom: 10px;
+              font-size: 10px; } }
+          @media (max-width: 480px) {
+            .pricing .pricing-content .pricing-bottom .price .sub-title {
+              font-size: 8px; } }
+        .pricing .pricing-content .pricing-bottom .price .title {
+          margin-bottom: 50px;
+          font-size: 48px; }
+          @media (max-width: 1400px) {
+            .pricing .pricing-content .pricing-bottom .price .title {
+              font-size: 38px;
+              margin-bottom: 20px; } }
+          @media (max-width: 1040px) {
+            .pricing .pricing-content .pricing-bottom .price .title {
+              font-size: 30px; } }
+          @media (max-width: 782px) {
+            .pricing .pricing-content .pricing-bottom .price .title {
+              font-size: 24px; } }
+          @media (max-width: 660px) {
+            .pricing .pricing-content .pricing-bottom .price .title {
+              margin-bottom: 15px;
+              font-size: 16px; } }
+          @media (max-width: 480px) {
+            .pricing .pricing-content .pricing-bottom .price .title {
+              font-size: 12px;
+              margin-bottom: 10px; } }
+        .pricing .pricing-content .pricing-bottom .price .text {
+          margin-bottom: 35px;
+          font-size: 18px; }
+          @media (max-width: 1400px) {
+            .pricing .pricing-content .pricing-bottom .price .text {
+              font-size: 14px; } }
+          @media (max-width: 1040px) {
+            .pricing .pricing-content .pricing-bottom .price .text {
+              font-size: 10px;
+              margin-bottom: 25px; } }
+          @media (max-width: 782px) {
+            .pricing .pricing-content .pricing-bottom .price .text {
+              font-size: 8px; } }
+          @media (max-width: 660px) {
+            .pricing .pricing-content .pricing-bottom .price .text {
+              margin-bottom: 10px; } }
+          @media (max-width: 480px) {
+            .pricing .pricing-content .pricing-bottom .price .text {
+              font-size: 6px; } }
+          @media (max-width: 420px) {
+            .pricing .pricing-content .pricing-bottom .price .text {
+              font-size: 5px; } }
+        .pricing .pricing-content .pricing-bottom .price .text-last {
+          margin-bottom: 60px;
+          font-size: 18px; }
+          @media (max-width: 1400px) {
+            .pricing .pricing-content .pricing-bottom .price .text-last {
+              margin-bottom: 30px;
+              font-size: 14px; } }
+          @media (max-width: 1040px) {
+            .pricing .pricing-content .pricing-bottom .price .text-last {
+              font-size: 10px; } }
+          @media (max-width: 782px) {
+            .pricing .pricing-content .pricing-bottom .price .text-last {
+              font-size: 8px; } }
+          @media (max-width: 480px) {
+            .pricing .pricing-content .pricing-bottom .price .text-last {
+              margin-bottom: 20px;
+              font-size: 6px; } }
+          @media (max-width: 420px) {
+            .pricing .pricing-content .pricing-bottom .price .text-last {
+              font-size: 5px; } }
+        .pricing .pricing-content .pricing-bottom .price .cost {
+          margin-bottom: 50px;
+          font-size: 36px; }
+          @media (max-width: 1400px) {
+            .pricing .pricing-content .pricing-bottom .price .cost {
+              font-size: 26px;
+              margin-bottom: 30px; } }
+          @media (max-width: 1040px) {
+            .pricing .pricing-content .pricing-bottom .price .cost {
+              font-size: 22px; } }
+          @media (max-width: 782px) {
+            .pricing .pricing-content .pricing-bottom .price .cost {
+              font-size: 18px; } }
+          @media (max-width: 660px) {
+            .pricing .pricing-content .pricing-bottom .price .cost {
+              margin-bottom: 20px; } }
+          @media (max-width: 480px) {
+            .pricing .pricing-content .pricing-bottom .price .cost {
+              font-size: 14px; } }
+        .pricing .pricing-content .pricing-bottom .price .pay {
+          height: 50px;
+          width: 160px;
+          color: #fb5501;
+          background-color: white;
+          border-radius: 15px;
+          text-transform: uppercase;
+          border: none;
+          cursor: pointer;
+          font-size: 14px; }
+          @media (max-width: 1040px) {
+            .pricing .pricing-content .pricing-bottom .price .pay {
+              height: 40px;
+              width: 150px; } }
+          @media (max-width: 782px) {
+            .pricing .pricing-content .pricing-bottom .price .pay {
+              height: 30px;
+              width: 130px;
+              font-size: 12px; } }
+          @media (max-width: 660px) {
+            .pricing .pricing-content .pricing-bottom .price .pay {
+              height: 26px;
+              width: 110px;
+              font-size: 10px; } }
+          @media (max-width: 480px) {
+            .pricing .pricing-content .pricing-bottom .price .pay {
+              width: 100px; } }
+          @media (max-width: 420px) {
+            .pricing .pricing-content .pricing-bottom .price .pay {
+              height: 20px;
+              width: 60px;
+              font-size: 6px; } }
+        .pricing .pricing-content .pricing-bottom .price .pay-last {
+          color: white;
+          background-color: #ff9159; }
+
+.sup {
+  vertical-align: super;
+  font-size: small; }
+  @media (max-width: 660px) {
+    .sup {
+      font-size: 10px; } }
+  @media (max-width: 480px) {
+    .sup {
+      font-size: 8px; } }
+
+/*---FOOTER---*/
+.footer {
+  background-color: #5e4f48; }
+  .footer .footer-content {
+    padding: 60px 0;
+    display: flex; }
+    @media (max-width: 1400px) {
+      .footer .footer-content {
+        padding: 30px 0; } }
+    .footer .footer-content img {
+      margin-right: 90px;
+      align-self: flex-start; }
+      @media (max-width: 1400px) {
+        .footer .footer-content img {
+          margin-right: 50px; } }
+      @media (max-width: 782px) {
+        .footer .footer-content img {
+          margin-right: 30px; } }
+      @media (max-width: 480px) {
+        .footer .footer-content img {
+          margin-right: 10px; } }
+    .footer .footer-content .link-block {
+      margin-right: 90px;
+      display: flex;
+      flex-direction: column;
+      font-family: "Maven Pro";
+      color: #c2b1a9; }
+      @media (max-width: 1400px) {
+        .footer .footer-content .link-block {
+          margin-right: 50px; } }
+      @media (max-width: 782px) {
+        .footer .footer-content .link-block {
+          margin-right: 20px; } }
+      @media (max-width: 480px) {
+        .footer .footer-content .link-block {
+          margin-right: 10px; } }
+      .footer .footer-content .link-block:last-child {
+        margin-right: 0px; }
+      .footer .footer-content .link-block .title {
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 20px; }
+        @media (max-width: 1400px) {
+          .footer .footer-content .link-block .title {
+            font-size: 16px; } }
+        @media (max-width: 1040px) {
+          .footer .footer-content .link-block .title {
+            font-size: 12px;
+            margin-bottom: 20px; } }
+        @media (max-width: 782px) {
+          .footer .footer-content .link-block .title {
+            margin-bottom: 12px; } }
+        @media (max-width: 480px) {
+          .footer .footer-content .link-block .title {
+            font-size: 7px;
+            margin-bottom: 10px; } }
+      .footer .footer-content .link-block .link {
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: #c2b1a9;
+        font-size: 18px; }
+        @media (max-width: 1400px) {
+          .footer .footer-content .link-block .link {
+            font-size: 14px; } }
+        @media (max-width: 1040px) {
+          .footer .footer-content .link-block .link {
+            font-size: 10px; } }
+        @media (max-width: 782px) {
+          .footer .footer-content .link-block .link {
+            margin-bottom: 8px;
+            font-size: 7px; } }
+        @media (max-width: 480px) {
+          .footer .footer-content .link-block .link {
+            font-size: 6px;
+            margin-bottom: 5px; } }
+
+@media (max-width: 660px) {
+  .footer-logo img {
+    width: 50%; } }
+
+/*---OTHER_PAGES---*/
